@@ -1661,7 +1661,12 @@
 			td.append(linkElem);
 			tr.append(td);
 
-			var isDarkTheme = OCA.Accessibility && OCA.Accessibility.theme === 'dark'
+			var isDarkTheme = false
+			// TODO: fixme as this is more of an hack
+			// Background color of files app is always rgb(255, 255, 255). If not, it must be dark mode
+			if (getComputedStyle(document.body).getPropertyValue('background-color') !== 'rgb(255, 255, 255)') {
+				isDarkTheme = true
+			}
 
 			try {
 				var maxContrastHex = window.getComputedStyle(document.documentElement)
