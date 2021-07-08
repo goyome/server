@@ -774,6 +774,7 @@ table.dragshadow td.size {
 .newFileMenu {
 	font-weight: 300;
 	top: 100%;
+	left: 35px !important;
 	margin-top: 4px;
 	min-width: 100px;
 	margin-left: 22px; /* Align left edge below center of + button … */
@@ -782,7 +783,7 @@ table.dragshadow td.size {
 
 	/* Center triangle */
 	&::after {
-		left: calc(50% - 8px) !important;
+		left: calc(50% - 43px) !important;
 	}
 }
 
